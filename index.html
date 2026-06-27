@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Torque Wheels – Premium alloy wheel marketplace. Buy and sell genuine alloy wheels from verified sellers across Europe, North America and the Middle East.">
+<title>TORQUE_WHEELS — Premium Alloy Wheel Marketplace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#ffffff;color:#0f1117;font-family:'Inter',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none;cursor:pointer}
+button{font-family:inherit;background:none;cursor:pointer;color:inherit;border:none}
+ul{list-style:none}
+input,select,textarea{font-family:inherit}
+
+/* ── Tokens ── */
+:root{
+  --gold:   #c9a84c;
+  --gold-l: #d4a853;
+  --gold-d: #a8872a;
+  --gold-bg:rgba(201,168,76,.10);
+  --dark:   #0f1117;
+  --dark2:  #181c24;
+  --dark3:  #252a35;
+  --white:  #ffffff;
+  --s1:     #f9f9f7;
+  --s2:     #f1f1ee;
+  --s3:     #e8e8e4;
+  --t1:     #0f1117;
+  --t2:     #3d4149;
+  --t3:     #7c8290;
+  --t4:     #b0b4bb;
+  --b1:     #e4e4e0;
+  --b2:     #d1d1cc;
+  --fd:     'Archivo',sans-serif;
+  --fm:     'JetBrains Mono',monospace;
+  --ls-:    -0.04em;
+  --ls+:    0.18em;
+  --r:      14px;
+  --max:    1280px;
+  --g:      20px;
+}
+@media(min-width:640px){:root{--g:32px}}
+@media(min-width:1024px){:root{--g:48px}}
+
+/* ── Utilities ── */
+.container{max-width:var(--max);margin:0 auto;padding-left:var(--g);padding-right:var(--g)}
+.hidden{display:none!important}
+.page{display:none}
+.page.active{display:block}
+.flex{display:flex}
+.fc{flex-direction:column}
+.gap4{gap:4px}.gap8{gap:8px}.gap12{gap:12px}.gap16{gap:16px}.gap20{gap:20px}.gap24{gap:24px}.gap32{gap:32px}.gap48{gap:48px}
+.ai-c{align-items:center}
+.jc-b{justify-content:space-between}
+.jc-c{justify-content:center}
+.wrap{flex-wrap:wrap}
+.ta-c{text-align:center}
+.w100{width:100%}
+.mt4{margin-top:4px}.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}.mt24{margin-top:24px}.mt32{margin-top:32px}
+.mb4{margin-bottom:4px}.mb8{margin-bottom:8px}.mb12{margin-bottom:12px}.mb16{margin-bottom:16px}.mb20{margin-bottom:20px}.mb32{margin-bottom:32px}
+.p0{padding:0}
+
+/* ── Chamfer ── */
+.cc{clip-path:polygon(0 12px,12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%)}
+.cc-sm{clip-path:polygon(0 7px,7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%)}
+
+/* ── Eyebrow ── */
+.eyebrow{display:flex;align-items:center;gap:10px;font-family:var(--fm);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:var(--ls+);color:var(--gold)}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);flex-shrink:0}
+.eyebrow-c{justify-content:center}
+.eyebrow-c::after{content:"";width:28px;height:1px;background:var(--gold);flex-shrink:0}
+.eyebrow-l{color:#f0d98a}
+.eyebrow-l::before,.eyebrow-l::after{background:#f0d98a}
+
+/* ── Headings ── */
+.h1,.h2,.h3{font-family:var(--fd);font-weight:900;text-transform:uppercase;letter-spacing:var(--ls-);line-height:.92}
+.h1{font-size:clamp(3rem,10vw,7rem)}
+.h2{font-size:clamp(2rem,4.5vw,3rem)}
+.h3{font-size:clamp(1rem,2vw,1.25rem)}
+.h1--w,.h2--w,.h3--w{color:#fff}
+.h2--outline{-webkit-text-stroke:2px var(--gold-l);color:transparent}
+
+/* ── Buttons ── */
+.btn,.btn-dark,.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;font-family:var(--fm);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:var(--ls+);border:none;cursor:pointer;white-space:nowrap;transition:filter .18s,transform .15s,background .18s,border-color .18s;clip-path:polygon(0 7px,7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%)}
+.btn{background:linear-gradient(135deg,#f0d98a,var(--gold));color:#0f1117}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-dark:hover{background:var(--dark2);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--t1);border:1.5px solid var(--b2)}
+.btn-ghost:hover{border-color:var(--dark);background:rgba(15,17,23,.04);transform:translateY(-1px)}
+.btn-ghost--w{color:#fff;border-color:rgba(255,255,255,.3)}
+.btn-ghost--w:hover{border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.08)}
+.btn-sm{padding:7px 14px;font-size:10px}
+.btn-danger{background:transparent;color:#dc2626;border:1px solid rgba(220,38,38,.3);font-family:var(--fm);font-size:9px;text-transform:uppercase;font-weight:700;padding:4px 10px;cursor:pointer}
+.btn-approve{background:linear-gradient(135deg,#f0d98a,var(--gold));color:#0f1117;font-family:var(--fm);font-size:9px;text-transform:uppercase;font-weight:700;padding:4px 10px;cursor:pointer;clip-path:polygon(0 4px,4px 0,100% 0,100% calc(100% - 4px),calc(100% - 4px) 100%,0 100%)}
+
+/* ── Form ── */
+.flabel{font-family:var(--fm);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--t2);display:block;margin-bottom:6px}
+.finput{display:block;width:100%;padding:11px 14px;background:#fff;border:1.5px solid var(--b2);color:var(--t1);font-family:'Inter',sans-serif;font-size:14px;outline:none;transition:border-color .18s;clip-path:polygon(0 5px,5px 0,100% 0,100% calc(100% - 5px),calc(100% - 5px) 100%,0 100%)}
+.finput:focus{border-color:var(--dark);box-shadow:0 0 0 3px rgba(15,17,23,.06)}
+.finput::placeholder{color:var(--t4)}
+select.finput{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237c8290' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px}
+textarea.finput{resize:vertical;min-height:100px;clip-path:none;border-radius:3px}
+.fgroup{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.ferr{font-family:var(--fm);font-size:10px;color:#dc2626;margin-top:4px}
+
+/* ── Alert ── */
+.alert-ok{padding:12px 16px;border:1.5px solid rgba(21,128,61,.3);background:rgba(240,253,244,.95);color:#15803d;border-radius:2px;font-size:13px}
+.alert-err{padding:12px 16px;border:1.5px solid rgba(220,38,38,.3);background:rgba(254,242,242,.95);color:#dc2626;border-radius:2px;font-size:13px}
+
+/* ── Filter pill ── */
+.pill{padding:7px 16px;font-family:var(--fm);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;border:1.5px solid var(--b2);background:transparent;color:var(--t3);clip-path:polygon(0 5px,5px 0,100% 0,100% calc(100% - 5px),calc(100% - 5px) 100%,0 100%);cursor:pointer;transition:all .18s}
+.pill:hover{border-color:var(--dark);color:var(--t1)}
+.pill.on{border-color:var(--dark);background:var(--dark);color:#fff}
+
+/* ── Site Header ── */
+#site-header{position:sticky;top:0;z-index:50;width:100%;background:rgba(255,255,255,.9);border-bottom:1px solid transparent;transition:all .3s;backdrop-filter:blur(12px)}
+#site-header.scrolled{background:rgba(255,255,255,.97);border-bottom-color:var(--b1);box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.h-inner{display:flex;align-items:center;justify-content:space-between;padding:18px var(--g);max-width:var(--max);margin:0 auto}
+.logo{font-family:var(--fd);font-weight:900;font-size:18px;text-transform:uppercase;letter-spacing:var(--ls-);cursor:pointer}
+.logo span{color:var(--gold)}
+.desktop-nav{display:none;align-items:center;gap:36px}
+@media(min-width:1024px){.desktop-nav{display:flex}.hamburger{display:none!important}}
+.nav-link{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:var(--ls+);color:var(--t3);font-family:var(--fm);transition:color .18s;cursor:pointer}
+.nav-link:hover,.nav-link.active{color:var(--t1)}
+.h-right{display:flex;align-items:center;gap:4px}
+.cart-btn{position:relative;padding:8px;color:var(--t1);display:flex;cursor:pointer}
+.cart-cnt{position:absolute;top:-2px;right:-2px;width:15px;height:15px;background:var(--gold);color:#fff;font-size:8px;font-weight:700;font-family:var(--fm);border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+/* ── Mobile menu ── */
+#mob-backdrop{position:fixed;inset:0;z-index:59;background:rgba(15,17,23,.5);backdrop-filter:blur(4px);display:none}
+#mob-nav{position:fixed;top:0;left:0;bottom:0;width:80%;max-width:320px;z-index:60;background:#fff;border-right:1px solid var(--b1);box-shadow:4px 0 32px rgba(0,0,0,.12);transform:translateX(-100%);transition:transform .32s cubic-bezier(.16,1,.3,1);overflow-y:auto;padding:24px}
+#mob-nav.open{transform:translateX(0)}
+.mob-link{display:block;padding:15px 0;border-bottom:1px solid var(--b1);font-family:var(--fd);font-weight:800;text-transform:uppercase;font-size:1rem;letter-spacing:-.01em;cursor:pointer}
+
+/* ── Cart drawer ── */
+#cart-overlay{position:fixed;inset:0;z-index:80;background:rgba(15,17,23,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;display:none}
+#cart-box{background:#fff;border:1px solid var(--b1);box-shadow:0 24px 64px rgba(0,0,0,.18);max-width:440px;width:100%;max-height:90vh;overflow-y:auto;clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)}
+
+/* ── Hero ── */
+#hero{background:var(--dark);color:#fff;min-height:72vh;display:flex;align-items:center;position:relative;overflow:hidden}
+#hero::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,var(--gold) 40%,#f0d98a 60%,transparent 100%)}
+.hero-wheel{position:absolute;pointer-events:none;opacity:.55}
+.hero-wheel-sm{position:absolute;pointer-events:none;opacity:.15;left:-120px;bottom:-80px}
+
+/* ── Stats row ── */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--b1)}
+@media(max-width:700px){.stats-row{grid-template-columns:repeat(2,1fr)}}
+.stat-cell{padding:28px 24px;border-right:1px solid var(--b1);border-bottom:1px solid var(--b1)}
+.stat-val{font-family:var(--fd);font-weight:900;font-size:clamp(1.6rem,3vw,2.25rem);letter-spacing:var(--ls-);line-height:1;color:var(--t1)}
+.stat-lbl{font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:var(--ls+);color:var(--t3);margin-top:8px}
+.stat-lbl::before{content:attr(data-icon)' '}
+
+/* ── Listing card ── */
+.listing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.lcard{background:#fff;border:1px solid var(--b1);box-shadow:0 2px 8px rgba(0,0,0,.06);clip-path:polygon(0 12px,12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%);transition:border-color .2s,transform .2s,box-shadow .2s;overflow:hidden;display:flex;flex-direction:column;cursor:pointer}
+.lcard:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.12),0 0 0 1px var(--gold)}
+.lcard-img{aspect-ratio:4/3;background:var(--s2);overflow:hidden;position:relative;flex-shrink:0}
+.lcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.lcard:hover .lcard-img img{transform:scale(1.04)}
+.lcard-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--t4);background:var(--s2)}
+.lcard-badge{position:absolute;top:10px;left:10px;padding:3px 9px;font-family:var(--fm);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;clip-path:polygon(0 4px,4px 0,100% 0,100% calc(100% - 4px),calc(100% - 4px) 100%,0 100%);background:rgba(255,255,255,.92);backdrop-filter:blur(4px);border:1px solid rgba(0,0,0,.08)}
+.badge-new{color:#15803d;border-color:rgba(21,128,61,.25)!important;background:rgba(240,253,244,.95)!important}
+.badge-exc{color:#92600a;border-color:rgba(201,168,76,.3)!important;background:rgba(254,252,232,.95)!important}
+.badge-feat{position:absolute;top:10px;right:10px;padding:3px 9px;font-family:var(--fm);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;background:rgba(255,251,235,.95);border:1px solid rgba(201,168,76,.4);color:#92600a;clip-path:polygon(0 4px,4px 0,100% 0,100% calc(100% - 4px),calc(100% - 4px) 100%,0 100%)}
+.lcard-body{padding:16px 18px;flex:1;display:flex;flex-direction:column;gap:4px}
+.lcard-brand{font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--gold)}
+.lcard-model{font-family:var(--fd);font-weight:800;font-size:1.0625rem;text-transform:uppercase;letter-spacing:var(--ls-);color:var(--t1);line-height:1.05}
+.lcard-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.ltag{font-family:var(--fm);font-size:9px;color:var(--t3);background:var(--s1);padding:2px 7px;border-radius:2px}
+.lcard-price-row{display:flex;align-items:baseline;gap:8px;margin-top:auto;padding-top:12px;border-top:1px solid var(--b1);margin-top:10px}
+.lcard-price{font-family:var(--fd);font-weight:900;font-size:1.25rem;letter-spacing:var(--ls-);color:var(--t1)}
+.lcard-orig{font-size:12px;color:var(--t4);text-decoration:line-through}
+.lcard-loc{margin-left:auto;display:flex;align-items:center;gap:3px;font-family:var(--fm);font-size:10px;color:var(--t3)}
+
+/* ── Listing detail ── */
+.detail-img{width:100%;aspect-ratio:16/9;background:var(--s2);object-fit:cover;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.detail-img img{width:100%;height:100%;object-fit:cover}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:20px}
+.spec-cell{padding:14px 16px;background:var(--s1);border:1px solid var(--b1)}
+.spec-key{font-family:var(--fm);font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:var(--t3);margin-bottom:4px}
+.spec-val{font-family:var(--fd);font-weight:800;font-size:.95rem;text-transform:uppercase;letter-spacing:var(--ls-);color:var(--t1)}
+
+/* ── Step indicator ── */
+.step-bar{display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:32px}
+.step-item{padding:14px 8px;text-align:center;border-bottom:2px solid var(--b1);font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--t4)}
+.step-item.done{border-bottom-color:var(--gold);color:var(--gold)}
+.step-item.active{border-bottom-color:var(--dark);color:var(--dark)}
+
+/* ── Upload zone ── */
+.upload-zone{border:2px dashed var(--b2);background:var(--s1);padding:40px 24px;text-align:center;cursor:pointer;transition:all .18s;border-radius:4px}
+.upload-zone:hover,.upload-zone.drag{border-color:var(--gold);background:var(--gold-bg)}
+.upload-zone input[type=file]{display:none}
+.upload-previews{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px;margin-top:12px}
+.upload-thumb{position:relative;aspect-ratio:1;overflow:hidden;border-radius:2px}
+.upload-thumb img{width:100%;height:100%;object-fit:cover}
+.upload-thumb .rm-img{position:absolute;top:4px;right:4px;width:20px;height:20px;background:rgba(0,0,0,.6);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;font-family:monospace}
+
+/* ── Admin ── */
+.admin-table{width:100%;border-collapse:collapse}
+.admin-table th{font-family:var(--fm);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--t3);padding:10px 14px;border-bottom:2px solid var(--b1);text-align:left;white-space:nowrap;background:var(--s1)}
+.admin-table td{padding:12px 14px;border-bottom:1px solid var(--b1);font-size:13px;color:var(--t2);vertical-align:middle}
+.admin-table tr:hover td{background:var(--s1)}
+
+/* ── Password gate ── */
+.gate{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--dark);padding:24px}
+.gate-box{background:#fff;max-width:420px;width:100%;padding:48px;clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%);box-shadow:0 24px 64px rgba(0,0,0,.4)}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.shake{animation:shake .45s ease}
+
+/* ── Testimonials ── */
+.tcard{background:#fff;border:1px solid var(--b1);box-shadow:0 2px 8px rgba(0,0,0,.05);padding:24px 24px 20px;clip-path:polygon(0 12px,12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%);display:flex;flex-direction:column;gap:14px}
+.tcard-quote{font-size:13.5px;color:var(--t2);line-height:1.75;font-style:italic;flex:1}
+.tcard-wheel{font-family:var(--fm);font-size:9px;color:#92600a;background:#fffbeb;border:1px solid rgba(201,168,76,.3);padding:3px 9px;border-radius:2px;display:inline-flex;align-items:center;gap:5px}
+.tcard-author{display:flex;align-items:center;gap:12px;padding-top:4px;border-top:1px solid var(--b1)}
+.tcard-avatar{width:40px;height:40px;border-radius:50%;background:var(--dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--fd);font-weight:900;font-size:13px;color:var(--gold-l);text-transform:uppercase}
+.tcard-name{font-family:var(--fd);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:var(--ls-);color:var(--t1)}
+.tcard-loc{font-family:var(--fm);font-size:10px;color:var(--t3);margin-top:2px}
+
+/* ── Blog / Guide card ── */
+.blog-card{border:1px solid var(--b1);background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.05);clip-path:polygon(0 12px,12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%);overflow:hidden;transition:border-color .2s,transform .2s}
+.blog-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.blog-card-img{aspect-ratio:16/9;background:var(--s2);overflow:hidden}
+.blog-card-body{padding:20px 22px}
+.blog-tag{font-family:var(--fm);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);margin-bottom:6px}
+.blog-title{font-family:var(--fd);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:var(--ls-);line-height:1.1;margin-bottom:8px}
+.blog-excerpt{font-size:13px;color:var(--t3);line-height:1.65}
+
+/* ── Footer ── */
+#footer{background:var(--dark);color:rgba(255,255,255,.4);border-top:2px solid var(--gold-d)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding:56px var(--g) 36px}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr;gap:24px}}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px var(--g);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+
+/* ── Checkout ── */
+.checkout-grid{display:grid;grid-template-columns:1fr 380px;gap:32px}
+@media(max-width:900px){.checkout-grid{grid-template-columns:1fr}}
+
+/* ── Skeleton ── */
+.skel{background:linear-gradient(90deg,var(--s2) 25%,var(--s1) 50%,var(--s2) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:2px}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* ── Responsive helpers ── */
+@media(max-width:700px){
+  .listing-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+  .spec-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+  .listing-grid{grid-template-columns:1fr}
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--s1)}
+::-webkit-scrollbar-thumb{background:var(--b2);border-radius:3px}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     SITE HEADER
+═══════════════════════════════════════════════════════ -->
+<header id="site-header">
+  <div class="h-inner">
+    <button class="hamburger" onclick="openMob()" style="display:flex;padding:6px;color:var(--t1)" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="logo" onclick="go('home')">TORQUE<span>_</span>WHEELS</div>
+    <nav class="desktop-nav">
+      <span class="nav-link" onclick="go('marketplace')">Marketplace</span>
+      <span class="nav-link" onclick="go('sell')">Sell Wheels</span>
+      <span class="nav-link" onclick="go('guides')">Guides</span>
+      <span class="nav-link" onclick="go('admin')">Admin</span>
+    </nav>
+    <div class="h-right">
+      <button class="cart-btn" onclick="openCart()" aria-label="Cart">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-cnt hidden" id="cart-cnt">0</span>
+      </button>
+      <button class="btn btn-sm" onclick="go('sell')" style="margin-left:8px">+ List Wheels</button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div id="mob-backdrop" onclick="closeMob()"></div>
+<div id="mob-nav">
+  <div class="flex jc-b ai-c mb32">
+    <div class="logo" style="font-size:15px">TORQUE<span>_</span>WHEELS</div>
+    <button onclick="closeMob()" style="color:var(--t3)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <span class="mob-link" onclick="go('marketplace');closeMob()">Marketplace</span>
+  <span class="mob-link" onclick="go('sell');closeMob()">Sell Wheels</span>
+  <span class="mob-link" onclick="go('guides');closeMob()">Guides</span>
+  <span class="mob-link" onclick="go('admin');closeMob()">Admin</span>
+  <button class="btn w100 mt24" style="justify-content:center" onclick="go('sell');closeMob()">+ List Your Wheels</button>
+</div>
+
+<!-- Cart drawer -->
+<div id="cart-overlay" onclick="closeCart()">
+  <div id="cart-box" onclick="event.stopPropagation()">
+    <div class="flex jc-b ai-c" style="padding:20px 24px;border-bottom:1px solid var(--b1)">
+      <span style="font-family:var(--fd);font-weight:800;font-size:1.1rem;text-transform:uppercase;letter-spacing:var(--ls-)">Cart <span id="cart-hd-cnt" style="color:var(--t3);font-family:var(--fm);font-size:12px;font-weight:400">(0)</span></span>
+      <button onclick="closeCart()" style="color:var(--t3)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div id="cart-items"></div>
+    <div id="cart-footer" style="padding:18px 24px;display:none">
+      <div class="flex jc-b ai-c mb16"><span style="font-family:var(--fm);font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:.1em">Total</span><span id="cart-total" style="font-family:var(--fd);font-weight:900;font-size:1.4rem"></span></div>
+      <button class="btn w100" style="justify-content:center" onclick="closeCart();go('checkout')">Proceed to Checkout →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGES
+═══════════════════════════════════════════════════════ -->
+<main id="main">
+
+<!-- ─── HOME ─── -->
+<div id="page-home" class="page">
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-wheel" id="hero-wheel-bg" style="right:-60px;top:50%;transform:translateY(-50%)">
+      <svg width="560" height="560" viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="96" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="78" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <circle cx="100" cy="100" r="58" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <circle cx="100" cy="100" r="16" fill="rgba(255,255,255,0.03)" stroke="rgba(201,168,76,0.35)" stroke-width="2"/>
+        <line x1="100" y1="16" x2="100" y2="58" stroke="rgba(255,255,255,0.07)" stroke-width="3"/>
+        <line x1="150" y1="36" x2="120" y2="77" stroke="rgba(255,255,255,0.07)" stroke-width="3"/>
+        <line x1="166" y1="91" x2="122" y2="97" stroke="rgba(255,255,255,0.07)" stroke-width="3"/>
+        <line x1="141" y1="151" x2="114" y2="117" stroke="rgba(255,255,255,0.07)" stroke-width="3"/>
+        <line x1="66" y1="167" x2="87" y2="122" stroke="rgba(255,255,255,0.07)" stroke-width="3"/>
+        <line x1="27" y1="126" x2="71" y2="109" stroke="rgba(255,255,255,0.07)" stroke-width="3"/>
+        <circle cx="100" cy="22" r="5" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.45)" stroke-width="1.5"/>
+        <circle cx="154" cy="55" r="5" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.45)" stroke-width="1.5"/>
+        <circle cx="178" cy="107" r="5" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.45)" stroke-width="1.5"/>
+        <circle cx="153" cy="166" r="5" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.45)" stroke-width="1.5"/>
+        <circle cx="64" cy="178" r="5" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.45)" stroke-width="1.5"/>
+        <circle cx="26" cy="128" r="5" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.45)" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="hero-wheel-sm">
+      <svg width="320" height="320" viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="96" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+        <circle cx="100" cy="100" r="58" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="16" fill="rgba(255,255,255,0.03)" stroke="rgba(201,168,76,0.3)" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="container" style="position:relative;z-index:2;padding-top:60px;padding-bottom:60px">
+      <div style="max-width:600px">
+        <div class="eyebrow eyebrow-l mb32">Premium Wheel Marketplace</div>
+        <h1 class="h1" style="color:#fff;margin-bottom:28px;line-height:.88">
+          FIND<br>YOUR<br>
+          <span class="h1 h2--outline" style="font-size:inherit">PERFECT</span><br>
+          WHEELS
+        </h1>
+        <p style="font-size:clamp(14px,1.4vw,17px);color:rgba(255,255,255,.55);line-height:1.75;max-width:460px;margin-bottom:36px">
+          Thousands of genuine alloy wheels from verified sellers across Europe, North America, and the Middle East.
+        </p>
+        <div class="flex gap12 wrap">
+          <button class="btn" onclick="go('marketplace')">Browse Listings <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+          <button class="btn-ghost btn-ghost--w" onclick="go('sell')">Sell Your Wheels</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div style="background:#fff;border-bottom:1px solid var(--b1)">
+    <div class="container p0">
+      <div class="stats-row">
+        <div class="stat-cell"><div class="stat-lbl" data-icon="◈">Active Listings</div><div class="stat-val" id="stat-listings">12</div></div>
+        <div class="stat-cell"><div class="stat-lbl" data-icon="✓">Verified Sellers</div><div class="stat-val">0.9K+</div></div>
+        <div class="stat-cell"><div class="stat-lbl" data-icon="⚡">Avg Dispatch</div><div class="stat-val">48h</div></div>
+        <div class="stat-cell"><div class="stat-lbl" data-icon="◎">Brands</div><div class="stat-val">12+</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured -->
+  <section style="background:var(--s1);padding:70px 0">
+    <div class="container">
+      <div class="flex jc-b ai-c mb32 wrap gap16">
+        <div><div class="eyebrow mb12">Curated Selection</div><h2 class="h2">Featured Wheels</h2></div>
+        <button class="btn-dark" onclick="go('marketplace')">View All Listings →</button>
+      </div>
+      <div class="listing-grid" id="featured-grid">
+        <div class="skel" style="height:380px"></div>
+        <div class="skel" style="height:380px"></div>
+        <div class="skel" style="height:380px"></div>
+        <div class="skel" style="height:380px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section style="background:#fff;padding:70px 0;border-top:1px solid var(--b1)">
+    <div class="container">
+      <div class="ta-c mb48"><div class="eyebrow eyebrow-c mb12">Simple Process</div><h2 class="h2">How It Works</h2></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--b1)">
+        <div style="padding:32px;background:#fff">
+          <div class="flex gap14 ai-c mb16"><div style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border:1.5px solid var(--b2);clip-path:polygon(0 7px,7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%);font-family:var(--fm);font-size:12px;font-weight:700;color:var(--gold)">01</div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.75"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+          <h3 class="h3 mb8">Browse &amp; Filter</h3><p style="font-size:13px;color:var(--t3);line-height:1.7">Search by brand, size, bolt pattern, and condition. Use advanced filters to find the exact spec you need.</p>
+        </div>
+        <div style="padding:32px;background:#fff">
+          <div class="flex gap14 ai-c mb16"><div style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border:1.5px solid var(--b2);clip-path:polygon(0 7px,7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%);font-family:var(--fm);font-size:12px;font-weight:700;color:var(--gold)">02</div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.75"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3 class="h3 mb8">Review Listing</h3><p style="font-size:13px;color:var(--t3);line-height:1.7">Check full specs, photos, seller details, and location. Message the seller with any questions before buying.</p>
+        </div>
+        <div style="padding:32px;background:#fff">
+          <div class="flex gap14 ai-c mb16"><div style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border:1.5px solid var(--b2);clip-path:polygon(0 7px,7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%);font-family:var(--fm);font-size:12px;font-weight:700;color:var(--gold)">03</div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="h3 mb8">Secure Checkout</h3><p style="font-size:13px;color:var(--t3);line-height:1.7">Complete your purchase securely. Buyer protection is included on every transaction made through the platform.</p>
+        </div>
+        <div style="padding:32px;background:#fff">
+          <div class="flex gap14 ai-c mb16"><div style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border:1.5px solid var(--b2);clip-path:polygon(0 7px,7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%);font-family:var(--fm);font-size:12px;font-weight:700;color:var(--gold)">04</div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.75"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <h3 class="h3 mb8">Fast Delivery</h3><p style="font-size:13px;color:var(--t3);line-height:1.7">Most sellers dispatch within 48 hours. Track your order from purchase all the way to your front door.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section style="background:var(--s1);padding:70px 0;border-top:1px solid var(--b1)">
+    <div class="container">
+      <div class="ta-c mb48"><div class="eyebrow eyebrow-c mb12">Verified Buyers</div><h2 class="h2">What Our Community Says</h2></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px">
+        <div class="tcard">
+          <div style="display:flex;gap:3px">★★★★★</div>
+          <p class="tcard-quote">"Found a mint set of BBS RS-GTs in exactly the right bolt pattern. The listing was accurate, seller dispatched within 24 hours. Couldn't be happier — this is how a wheel marketplace should work."</p>
+          <div class="tcard-wheel">◎ BBS RS-GT 19"</div>
+          <div class="tcard-author"><div class="tcard-avatar">MH</div><div><div class="tcard-name">Markus Hoffmann</div><div class="tcard-loc">🇩🇪 Munich, Germany · Buyer</div></div></div>
+        </div>
+        <div class="tcard">
+          <div style="display:flex;gap:3px">★★★★★</div>
+          <p class="tcard-quote">"I've bought twice and sold once through Torque Wheels. The process is clean, buyers are serious, and payment was smooth. Sold my Enkei RPF1s within 3 days of listing."</p>
+          <div class="tcard-wheel">◎ Enkei RPF1 15"</div>
+          <div class="tcard-author"><div class="tcard-avatar">JO</div><div><div class="tcard-name">James Okonkwo</div><div class="tcard-loc">🇨🇦 Toronto, Canada · Buyer &amp; Seller</div></div></div>
+        </div>
+        <div class="tcard">
+          <div style="display:flex;gap:3px">★★★★★</div>
+          <p class="tcard-quote">"Tracked down a rare set of Volk TE37s in bronze — had been searching for months. The search filters are genuinely useful. Flew them in from the Netherlands, no issues whatsoever."</p>
+          <div class="tcard-wheel">◎ Rays Volk TE37 17"</div>
+          <div class="tcard-author"><div class="tcard-avatar">TR</div><div><div class="tcard-name">Tyler Ramirez</div><div class="tcard-loc">🇺🇸 Los Angeles, USA · Buyer</div></div></div>
+        </div>
+        <div class="tcard">
+          <div style="display:flex;gap:3px">★★★★★</div>
+          <p class="tcard-quote">"Listed my Vossen HF-2 set after upgrading. Had three serious enquiries within the first day and sold by the weekend. The admin panel makes everything easy to manage."</p>
+          <div class="tcard-wheel">◎ Vossen HF-2 20"</div>
+          <div class="tcard-author"><div class="tcard-avatar">KA</div><div><div class="tcard-name">Khalid Al Mansoori</div><div class="tcard-loc">🇦🇪 Dubai, UAE · Seller</div></div></div>
+        </div>
+        <div class="tcard">
+          <div style="display:flex;gap:3px">★★★★★</div>
+          <p class="tcard-quote">"As a woman who takes her car seriously, I was impressed by how professional the platform feels. No nonsense — just real listings, real specs, and a fast checkout. My OZ wheels arrived perfectly."</p>
+          <div class="tcard-wheel">◎ OZ Superturismo 18"</div>
+          <div class="tcard-author"><div class="tcard-avatar">SL</div><div><div class="tcard-name">Sophie Lefèvre</div><div class="tcard-loc">🇫🇷 Paris, France · Buyer</div></div></div>
+        </div>
+        <div class="tcard">
+          <div style="display:flex;gap:3px">★★★★★</div>
+          <p class="tcard-quote">"Bought a set of Gram Lights from a US seller — the transaction was transparent throughout. Seller updated me at every step. Great platform for cross-border purchases."</p>
+          <div class="tcard-wheel">◎ Gram Lights 57DR 18"</div>
+          <div class="tcard-author"><div class="tcard-avatar">DV</div><div><div class="tcard-name">Daan van der Berg</div><div class="tcard-loc">🇳🇱 Amsterdam, Netherlands · Buyer</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands strip -->
+  <div style="background:var(--dark);padding:24px 0;border-top:2px solid var(--gold-d)">
+    <div class="container"><div class="flex gap32 wrap ai-c jc-c">
+      <span style="font-family:var(--fd);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.25)">BBS</span>
+      <span style="font-family:var(--fd);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.25)">Enkei</span>
+      <span style="font-family:var(--fd);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.25)">Rays</span>
+      <span style="font-family:var(--fd);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.25)">OZ Racing</span>
+      <span style="font-family:var(--fd);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.25)">Work</span>
+      <span style="font-family:var(--fd);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.25)">Vossen</span>
+      <span style="font-family:var(--fd);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.25)">Gram Lights</span>
+    </div></div>
+  </div>
+
+  <!-- CTA -->
+  <section style="background:var(--dark);padding:70px 0;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,.06)">
+    <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-d),transparent)"></div>
+    <div class="container ta-c" style="position:relative">
+      <div class="eyebrow eyebrow-c eyebrow-l mb16">Start Selling Today</div>
+      <h2 class="h2 h2--w mb16">List Your Wheels.<br>Reach Global Buyers.</h2>
+      <div style="width:56px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 24px"></div>
+      <p style="color:rgba(255,255,255,.45);font-size:15px;max-width:420px;margin:0 auto 36px;line-height:1.75">Free to list. No upfront fees. Buyers from Europe, North America, the UAE and beyond.</p>
+      <div class="flex gap12 jc-c wrap">
+        <button class="btn" onclick="go('sell')">Create a Listing →</button>
+        <button class="btn-ghost btn-ghost--w" onclick="go('guides')">Seller Guides</button>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-home -->
+
+<!-- ─── MARKETPLACE ─── -->
+<div id="page-marketplace" class="page">
+  <div style="background:#fff;border-bottom:1px solid var(--b1);padding:36px 0 24px">
+    <div class="container">
+      <div class="eyebrow mb10">Torque Wheels</div>
+      <div class="flex jc-b ai-c wrap gap12">
+        <h1 class="h2">Marketplace</h1>
+        <span id="mp-count" style="font-family:var(--fm);font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:.1em"></span>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="padding-top:24px;padding-bottom:60px">
+    <div class="flex gap10 mb14 wrap">
+      <div style="flex:1;min-width:200px;position:relative">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--t4);pointer-events:none"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="finput" id="mp-search" placeholder="Search brand, model, finish…" oninput="renderMarketplace()" style="padding-left:36px">
+      </div>
+      <select class="finput" id="mp-sort" onchange="renderMarketplace()" style="width:auto;clip-path:none;border-radius:2px">
+        <option value="newest">Newest First</option>
+        <option value="asc">Price: Low → High</option>
+        <option value="desc">Price: High → Low</option>
+      </select>
+    </div>
+    <div class="flex gap8 wrap mb10" id="brand-pills"></div>
+    <div class="flex gap8 wrap mb24" id="cond-pills"></div>
+    <div class="listing-grid" id="mp-grid"></div>
+  </div>
+</div>
+
+<!-- ─── LISTING DETAIL ─── -->
+<div id="page-detail" class="page">
+  <div class="container" style="padding-top:32px;padding-bottom:60px">
+    <button class="btn-ghost btn-sm mb20" onclick="go('marketplace')">← Back to Marketplace</button>
+    <div id="detail-content"></div>
+  </div>
+</div>
+
+<!-- ─── SELL FORM ─── -->
+<div id="page-sell" class="page">
+  <div style="background:#fff;border-bottom:1px solid var(--b1);padding:36px 0 24px">
+    <div class="container">
+      <div class="eyebrow mb10">Seller Hub</div>
+      <h1 class="h2">Sell Your Wheels</h1>
+      <p style="color:var(--t3);margin-top:8px;font-size:14px">Complete all steps to list your wheels. Free to list — no upfront fees.</p>
+    </div>
+  </div>
+  <div class="container" style="padding-top:32px;padding-bottom:60px;max-width:760px">
+    <div class="step-bar mb32">
+      <div class="step-item active" id="step-1">01 Wheel Details</div>
+      <div class="step-item" id="step-2">02 Pricing</div>
+      <div class="step-item" id="step-3">03 Photos</div>
+      <div class="step-item" id="step-4">04 Contact</div>
+    </div>
+
+    <!-- Step 1 -->
+    <div id="sell-s1">
+      <h3 class="h3 mb24">Wheel Details</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="fgroup"><label class="flabel">Brand *</label>
+          <select class="finput" id="s-brand"><option value="">Select brand…</option><option>BBS</option><option>Enkei</option><option>Rays</option><option>OZ Racing</option><option>Work</option><option>Apex</option><option>Rota</option><option>Vossen</option><option>Other</option></select>
+        </div>
+        <div class="fgroup"><label class="flabel">Model *</label><input class="finput" id="s-model" placeholder="e.g. RS-GT"></div>
+        <div class="fgroup"><label class="flabel">Size (e.g. 18x8.5) *</label><input class="finput" id="s-size" placeholder="18x8.5"></div>
+        <div class="fgroup"><label class="flabel">Bolt Pattern *</label><input class="finput" id="s-bolt" placeholder="5x112"></div>
+        <div class="fgroup"><label class="flabel">Condition *</label>
+          <select class="finput" id="s-cond"><option value="">Select…</option><option value="New">New</option><option value="Used – Excellent">Used – Excellent</option><option value="Used – Good">Used – Good</option></select>
+        </div>
+        <div class="fgroup"><label class="flabel">Finish *</label><input class="finput" id="s-finish" placeholder="e.g. Gloss Black"></div>
+        <div class="fgroup"><label class="flabel">Set of *</label>
+          <select class="finput" id="s-setof"><option value="4">4 wheels</option><option value="5">5 wheels</option><option value="2">2 wheels</option><option value="1">Single wheel</option></select>
+        </div>
+        <div class="fgroup"><label class="flabel">Width per wheel (optional)</label><input class="finput" id="s-width" placeholder="e.g. 8.5J"></div>
+      </div>
+      <div class="fgroup mt8"><label class="flabel">Description</label><textarea class="finput" id="s-desc" placeholder="Describe condition, history, any damage, included extras…"></textarea></div>
+      <div id="s1-err" class="ferr"></div>
+      <button class="btn mt20" onclick="sellNext(1)">Next: Pricing →</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="sell-s2" style="display:none">
+      <h3 class="h3 mb24">Pricing &amp; Location</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="fgroup"><label class="flabel">Asking Price (£) *</label><input class="finput" id="s-price" type="number" min="1" placeholder="e.g. 950"></div>
+        <div class="fgroup"><label class="flabel">Original / RRP (£) (optional)</label><input class="finput" id="s-orig" type="number" min="1" placeholder="e.g. 1400"></div>
+        <div class="fgroup" style="grid-column:1/-1"><label class="flabel">Location *</label>
+          <select class="finput" id="s-location">
+            <option value="">Select your location…</option>
+            <optgroup label="Europe"><option>London, UK</option><option>Munich, Germany</option><option>Berlin, Germany</option><option>Paris, France</option><option>Amsterdam, Netherlands</option><option>Milan, Italy</option><option>Zurich, Switzerland</option><option>Barcelona, Spain</option><option>Vienna, Austria</option><option>Stockholm, Sweden</option></optgroup>
+            <optgroup label="North America"><option>New York, USA</option><option>Los Angeles, USA</option><option>Miami, USA</option><option>Chicago, USA</option><option>Toronto, Canada</option><option>Vancouver, Canada</option><option>Montreal, Canada</option></optgroup>
+            <optgroup label="Middle East"><option>Dubai, UAE</option><option>Abu Dhabi, UAE</option><option>Riyadh, Saudi Arabia</option></optgroup>
+            <optgroup label="Asia Pacific"><option>Tokyo, Japan</option><option>Sydney, Australia</option></optgroup>
+          </select>
+        </div>
+      </div>
+      <div id="s2-err" class="ferr"></div>
+      <div class="flex gap12 mt20">
+        <button class="btn-ghost" onclick="sellBack(2)">← Back</button>
+        <button class="btn" onclick="sellNext(2)">Next: Photos →</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="sell-s3" style="display:none">
+      <h3 class="h3 mb8">Upload Photos</h3>
+      <p style="color:var(--t3);font-size:13px;margin-bottom:20px">Add up to 8 photos. Images are stored locally in your browser. Click the zone or drag &amp; drop files.</p>
+      <div class="upload-zone" id="upload-zone" onclick="document.getElementById('photo-input').click()" ondragover="event.preventDefault();this.classList.add('drag')" ondragleave="this.classList.remove('drag')" ondrop="handleDrop(event)">
+        <input type="file" id="photo-input" accept="image/*" multiple onchange="handleFiles(this.files)">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--t4)" stroke-width="1.5" style="margin:0 auto 12px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <p style="font-family:var(--fm);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--t3)">Click to browse or drag photos here</p>
+        <p style="font-size:12px;color:var(--t4);margin-top:6px">JPG, PNG, WebP — max 5MB each</p>
+      </div>
+      <div class="upload-previews" id="photo-previews"></div>
+      <div class="flex gap12 mt24">
+        <button class="btn-ghost" onclick="sellBack(3)">← Back</button>
+        <button class="btn" onclick="sellNext(3)">Next: Contact →</button>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div id="sell-s4" style="display:none">
+      <h3 class="h3 mb24">Contact Details</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="fgroup"><label class="flabel">Your Name *</label><input class="finput" id="s-name" placeholder="Full name"></div>
+        <div class="fgroup"><label class="flabel">Email Address *</label><input class="finput" id="s-email" type="email" placeholder="you@example.com"></div>
+        <div class="fgroup"><label class="flabel">Phone (optional)</label><input class="finput" id="s-phone" type="tel" placeholder="+44 7700 900000"></div>
+        <div class="fgroup"><label class="flabel">Preferred Contact</label>
+          <select class="finput" id="s-contact"><option>Email</option><option>Phone</option><option>WhatsApp</option></select>
+        </div>
+      </div>
+      <div id="s4-err" class="ferr"></div>
+      <div id="s4-ok" class="alert-ok mt16" style="display:none"></div>
+      <div class="flex gap12 mt20">
+        <button class="btn-ghost" onclick="sellBack(4)">← Back</button>
+        <button class="btn" id="submit-btn" onclick="submitListing()">Submit Listing →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ADMIN ─── -->
+<div id="page-admin" class="page">
+  <!-- Password gate (shown by default) -->
+  <div id="admin-gate" class="gate">
+    <div class="gate-box" id="gate-box">
+      <div class="ta-c mb32">
+        <div class="logo mb8" style="display:block;font-size:20px">TORQUE<span>_</span>WHEELS</div>
+        <div style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--t3)">Admin Portal</div>
+      </div>
+      <div style="display:flex;justify-content:center;margin-bottom:24px">
+        <div style="width:60px;height:60px;background:var(--s1);border:1.5px solid var(--b2);border-radius:50%;display:flex;align-items:center;justify-content:center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.75"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+      </div>
+      <label class="flabel">Admin Password</label>
+      <input class="finput" type="password" id="admin-pw" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')checkAdminPw()">
+      <div id="admin-pw-err" class="ferr mt8"></div>
+      <button class="btn mt20 w100" style="justify-content:center" onclick="checkAdminPw()">Unlock Dashboard →</button>
+      <p style="margin-top:18px;text-align:center;font-family:var(--fm);font-size:10px;color:var(--t4);text-transform:uppercase;letter-spacing:.1em">Authorised personnel only</p>
+    </div>
+  </div>
+  <!-- Dashboard (hidden until unlocked) -->
+  <div id="admin-dash" style="display:none;background:var(--s1);min-height:100vh">
+    <div style="background:#fff;border-bottom:1px solid var(--b1);padding:32px 0 24px">
+      <div class="container">
+        <div class="flex jc-b ai-c wrap gap12">
+          <div><div class="eyebrow mb10">Control Panel</div><h1 class="h2">Admin Dashboard</h1></div>
+          <button class="btn-ghost btn-sm" onclick="adminLogout()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg> Sign Out</button>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="padding-top:28px;padding-bottom:60px">
+      <div id="admin-msg"></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px" id="admin-stats"></div>
+      <div class="flex gap8 wrap mb16" id="admin-filter-btns"></div>
+      <div style="background:#fff;border:1px solid var(--b1);overflow-x:auto;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+        <table class="admin-table" id="admin-tbl"><thead><tr><th>ID</th><th>Brand / Model</th><th>Size</th><th>Price</th><th>Location</th><th>Status</th><th>Featured</th><th>Actions</th></tr></thead><tbody id="admin-tbody"></tbody></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── GUIDES ─── -->
+<div id="page-guides" class="page">
+  <div style="background:#fff;border-bottom:1px solid var(--b1);padding:36px 0 24px">
+    <div class="container"><div class="eyebrow mb10">Resources</div><h1 class="h2">Seller &amp; Buyer Guides</h1></div>
+  </div>
+  <div class="container" style="padding:40px var(--g) 60px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
+      <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,var(--dark),var(--dark2))"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="margin:40px auto"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div><div class="blog-card-body"><div class="blog-tag">Buying Guide</div><div class="blog-title">How to Choose the Right Bolt Pattern</div><div class="blog-excerpt">A step-by-step guide to measuring bolt patterns and understanding PCD for your vehicle.</div></div></div>
+      <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#1a2f1a,#2d4a2d)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="1.5" style="margin:40px auto"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="blog-card-body"><div class="blog-tag">Safety</div><div class="blog-title">Inspecting Used Alloys: What to Look For</div><div class="blog-excerpt">Cracks, curb damage, and corrosion — know what to check before you buy a second-hand set.</div></div></div>
+      <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#1a1a2e,#2e2e4a)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.5" style="margin:40px auto"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="blog-card-body"><div class="blog-tag">Pricing</div><div class="blog-title">How to Price Your Wheels to Sell Fast</div><div class="blog-excerpt">Market pricing strategies, condition adjustments, and how to research comparable sales.</div></div></div>
+      <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#2d1a0e,#4a2e14)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fdba74" stroke-width="1.5" style="margin:40px auto"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div class="blog-card-body"><div class="blog-tag">Shipping</div><div class="blog-title">Shipping Wheels Internationally: A Complete Guide</div><div class="blog-excerpt">Packaging, couriers, customs, and insurance — everything you need for a smooth cross-border sale.</div></div></div>
+      <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#0e2d2d,#144a4a)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="1.5" style="margin:40px auto"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="blog-card-body"><div class="blog-tag">History</div><div class="blog-title">JDM vs European Wheels: A Brief History</div><div class="blog-excerpt">From BBS's motorsport roots to Rays Volk Engineering — the story behind the iconic brands.</div></div></div>
+      <div class="blog-card"><div class="blog-card-img" style="background:linear-gradient(135deg,#1a0e2d,#2d1451)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c4b5fd" stroke-width="1.5" style="margin:40px auto"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div><div class="blog-card-body"><div class="blog-tag">Trust &amp; Safety</div><div class="blog-title">Buyer Protection: How Torque Wheels Keeps You Safe</div><div class="blog-excerpt">Our verification process, dispute resolution, and refund policy explained clearly.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CHECKOUT ─── -->
+<div id="page-checkout" class="page">
+  <div style="background:#fff;border-bottom:1px solid var(--b1);padding:36px 0 24px">
+    <div class="container"><div class="eyebrow mb10">Secure Purchase</div><h1 class="h2">Checkout</h1></div>
+  </div>
+  <div class="container" style="padding-top:32px;padding-bottom:60px">
+    <div class="checkout-grid">
+      <div>
+        <h3 class="h3 mb20">Billing Details</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="fgroup"><label class="flabel">First Name *</label><input class="finput" id="ch-fn" placeholder="James"></div>
+          <div class="fgroup"><label class="flabel">Last Name *</label><input class="finput" id="ch-ln" placeholder="Okonkwo"></div>
+          <div class="fgroup" style="grid-column:1/-1"><label class="flabel">Email *</label><input class="finput" id="ch-email" type="email" placeholder="you@example.com"></div>
+          <div class="fgroup" style="grid-column:1/-1"><label class="flabel">Delivery Address *</label><input class="finput" id="ch-addr" placeholder="Street, City, Postcode, Country"></div>
+          <div class="fgroup"><label class="flabel">Phone</label><input class="finput" id="ch-phone" type="tel" placeholder="+1 555 0100"></div>
+        </div>
+        <h3 class="h3 mb16 mt32">Payment (Demo)</h3>
+        <div style="background:var(--s1);border:1.5px dashed var(--b2);padding:20px;border-radius:3px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div class="fgroup" style="grid-column:1/-1"><label class="flabel">Card Number</label><input class="finput" placeholder="1234 5678 9012 3456" maxlength="19"></div>
+            <div class="fgroup"><label class="flabel">Expiry</label><input class="finput" placeholder="MM/YY" maxlength="5"></div>
+            <div class="fgroup"><label class="flabel">CVV</label><input class="finput" placeholder="123" maxlength="3"></div>
+          </div>
+          <p style="font-size:11px;color:var(--t4);font-family:var(--fm);text-transform:uppercase;letter-spacing:.1em;margin-top:8px">⚠ Demo only — no real payments processed</p>
+        </div>
+        <div id="ch-ok" class="alert-ok mt16" style="display:none"></div>
+        <button class="btn mt20" onclick="placeOrder()">Place Order →</button>
+      </div>
+      <div>
+        <h3 class="h3 mb16">Order Summary</h3>
+        <div id="order-summary" style="background:#fff;border:1px solid var(--b1);padding:20px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main><!-- /main -->
+
+<!-- ─── FOOTER ─── -->
+<footer id="footer">
+  <div class="container" style="max-width:var(--max)">
+    <div class="footer-grid">
+      <div>
+        <div class="logo mb16" style="color:#fff;font-size:18px">TORQUE<span>_</span>WHEELS</div>
+        <p style="font-size:13px;line-height:1.75;max-width:280px;color:rgba(255,255,255,.35)">The premium alloy wheel marketplace for serious enthusiasts. Serving buyers and sellers across Europe, North America, and the Middle East.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--fm);font-size:9px;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);margin-bottom:16px;font-weight:700">Marketplace</div>
+        <div style="margin-bottom:10px;font-size:13px;cursor:pointer" onclick="go('marketplace')">Browse Listings</div>
+        <div style="margin-bottom:10px;font-size:13px;cursor:pointer" onclick="go('sell')">Sell Wheels</div>
+        <div style="margin-bottom:10px;font-size:13px;cursor:pointer" onclick="go('guides')">Guides</div>
+      </div>
+      <div>
+        <div style="font-family:var(--fm);font-size:9px;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);margin-bottom:16px;font-weight:700">Support</div>
+        <div style="margin-bottom:10px;font-size:13px">How It Works</div>
+        <div style="margin-bottom:10px;font-size:13px">Buyer Protection</div>
+        <div style="margin-bottom:10px;font-size:13px">Shipping Policy</div>
+        <div style="margin-bottom:10px;font-size:13px">Contact Us</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.1em">© 2026 Torque Wheels Ltd.</span>
+      <div class="flex gap16">
+        <span style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.1em">Privacy Policy</span>
+        <span style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.1em">Terms of Service</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════ -->
+<script>
+/* ── SEED DATA ── */
+const SEED = [
+  {id:1,brand:"BBS",model:"RS-GT",size:"19x9.5",boltPattern:"5x112",condition:"Used – Excellent",conditionClass:"cond-excellent",price:1249,originalPrice:1800,location:"Munich, Germany",finish:"Platinum Silver",setOf:4,imageUrls:[],description:"Genuine BBS RS-GT set of 4 in superb condition. No kerb damage, no cracks. Ideal for Audi, VW, BMW.",sellerName:"AutoHaus Bavaria",sellerEmail:"sales@autohaus-bavaria.de",status:"approved",featured:true,createdAt:Date.now()-8640000*10},
+  {id:2,brand:"Enkei",model:"TS-9",size:"18x8",boltPattern:"5x114.3",condition:"Used – Excellent",conditionClass:"cond-excellent",price:580,originalPrice:840,location:"Toronto, Canada",finish:"Matte Black",setOf:4,imageUrls:[],description:"Lightweight Enkei TS-9 alloys perfect for track day or daily use. Polished lips, no damage.",sellerName:"Track Parts Canada",sellerEmail:"parts@trackca.com",status:"approved",featured:true,createdAt:Date.now()-8640000*9},
+  {id:3,brand:"Rays",model:"Volk TE37",size:"17x8",boltPattern:"4x100",condition:"New",conditionClass:"cond-new",price:2800,originalPrice:null,location:"Los Angeles, USA",finish:"Bronze",setOf:4,imageUrls:[],description:"Brand new Rays Volk TE37 bronze set. Never fitted, still in original packaging. JDM legend.",sellerName:"JDM Direct USA",sellerEmail:"sales@jdmdirectusa.com",status:"approved",featured:true,createdAt:Date.now()-8640000*8},
+  {id:4,brand:"OZ Racing",model:"Superturismo LM",size:"18x8.5",boltPattern:"5x108",condition:"Used – Excellent",conditionClass:"cond-excellent",price:720,originalPrice:1100,location:"Paris, France",finish:"Race Silver",setOf:4,imageUrls:[],description:"OZ Racing Superturismo set in race silver. Light scruffs on 1 rim, otherwise excellent.",sellerName:"Prestige Auto Paris",sellerEmail:"info@prestigeauto.fr",status:"approved",featured:false,createdAt:Date.now()-8640000*7},
+  {id:5,brand:"Work",model:"Emotion CR Kiwami",size:"18x9",boltPattern:"5x120",condition:"Used – Good",conditionClass:"cond-good",price:950,originalPrice:1400,location:"Dubai, UAE",finish:"White",setOf:4,imageUrls:[],description:"Work Emotion CR Kiwami. Some light kerb rash on two rims. BMW fitment.",sellerName:"Gulf Motor Parts",sellerEmail:"sell@gulfmotorparts.ae",status:"approved",featured:false,createdAt:Date.now()-8640000*6},
+  {id:6,brand:"Apex",model:"SM-10",size:"19x10",boltPattern:"5x114.3",condition:"New",conditionClass:"cond-new",price:1350,originalPrice:null,location:"Miami, USA",finish:"Satin Black",setOf:4,imageUrls:[],description:"Apex SM-10 flowform wheels in satin black. Never fitted. Nissan / Hyundai fitment.",sellerName:"Apex Auto Miami",sellerEmail:"orders@apexmiami.com",status:"approved",featured:true,createdAt:Date.now()-8640000*5},
+  {id:7,brand:"Vossen",model:"HF-2",size:"20x10",boltPattern:"5x112",condition:"Used – Excellent",conditionClass:"cond-excellent",price:2100,originalPrice:3000,location:"Amsterdam, Netherlands",finish:"Gloss Graphite",setOf:4,imageUrls:[],description:"Vossen HF-2 hybrid forged. Stunning Audi / Mercedes fitment. Gloss graphite with brushed face.",sellerName:"Dutch Performance Parts",sellerEmail:"sales@dutchperformance.nl",status:"approved",featured:true,createdAt:Date.now()-8640000*4},
+  {id:8,brand:"BBS",model:"CH-R",size:"20x8.5",boltPattern:"5x120",condition:"Used – Excellent",conditionClass:"cond-excellent",price:1820,originalPrice:2500,location:"Zurich, Switzerland",finish:"Brilliant Silver",setOf:4,imageUrls:[],description:"BBS CH-R 20\" brilliant silver. Stunning forged wheels for BMW 3/5 series.",sellerName:"Swiss Alloys GmbH",sellerEmail:"admin@swissalloys.ch",status:"approved",featured:false,createdAt:Date.now()-8640000*3},
+  {id:9,brand:"Rays",model:"Gram Lights 57DR",size:"18x9.5",boltPattern:"5x114.3",condition:"Used – Excellent",conditionClass:"cond-excellent",price:1100,originalPrice:1600,location:"New York, USA",finish:"Titanium Grey",setOf:4,imageUrls:[],description:"Gram Lights 57DR titanium grey. Ultralight semi-forged. Perfect for Supra, GT-R, STi.",sellerName:"JDM Direct USA",sellerEmail:"sales@jdmdirectusa.com",status:"approved",featured:false,createdAt:Date.now()-8640000*2},
+  {id:10,brand:"OZ Racing",model:"Leggera HLT",size:"17x7",boltPattern:"4x108",condition:"New",conditionClass:"cond-new",price:850,originalPrice:null,location:"Milan, Italy",finish:"Crystal Titanium",setOf:4,imageUrls:[],description:"OZ Leggera HLT – ultra-lightweight 1-piece wheel. New old stock, perfect for Peugeot / Citroën.",sellerName:"OZ Racing Direct",sellerEmail:"parts@ozracing-direct.it",status:"approved",featured:false,createdAt:Date.now()-8640000*1},
+  {id:11,brand:"Enkei",model:"RPF1",size:"15x7",boltPattern:"4x100",condition:"Used – Good",conditionClass:"cond-good",price:360,originalPrice:520,location:"Berlin, Germany",finish:"Silver",setOf:4,imageUrls:[],description:"Enkei RPF1 – the iconic motorsport wheel. Light marks but structurally perfect.",sellerName:"Berlin Motorsport",sellerEmail:"info@berlinmotorsport.de",status:"approved",featured:false,createdAt:Date.now()-3600000},
+  {id:12,brand:"Rota",model:"Grid",size:"16x7",boltPattern:"4x100",condition:"Used – Good",conditionClass:"cond-good",price:200,originalPrice:350,location:"Vancouver, Canada",finish:"Gunmetal",setOf:4,imageUrls:[],description:"Rota Grid 4x100 gunmetal set. Light surface marks on one wheel. Great budget option.",sellerName:"Pacific Rim Auto",sellerEmail:"info@pacificrimauto.ca",status:"approved",featured:false,createdAt:Date.now()-1800000},
+];
+
+/* ── STATE ── */
+const ADMIN_PW = "TorqueAdmin2026";
+let currentPage = 'home';
+let mpBrand = 'all', mpCond = 'all', mpFilter = 'all';
+let sellStep = 1;
+let sellPhotos = []; // base64 data URLs
+let cart = [];
+let listings = [];
+
+function loadListings(){
+  try{const s=localStorage.getItem('tw_listings');if(s){listings=JSON.parse(s);}else{listings=SEED.map(l=>({...l}));saveListings();}}
+  catch(e){listings=SEED.map(l=>({...l}));}
+}
+function saveListings(){try{localStorage.setItem('tw_listings',JSON.stringify(listings));}catch(e){}}
+function loadCart(){try{const s=localStorage.getItem('tw_cart');if(s)cart=JSON.parse(s);}catch(e){}}
+function saveCart(){try{localStorage.setItem('tw_cart',JSON.stringify(cart));}catch(e){}}
+function nextId(){return(listings.reduce((m,l)=>Math.max(m,l.id),0))+1;}
+
+/* ── ROUTING ── */
+function go(page, id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const pg = document.getElementById('page-'+page);
+  if(pg){pg.classList.add('active');currentPage=page;}
+  window.scrollTo(0,0);
+  if(page==='home') renderHome();
+  if(page==='marketplace') renderMarketplace();
+  if(page==='detail'&&id!=null) renderDetail(id);
+  if(page==='admin') renderAdmin();
+  if(page==='checkout') renderCheckout();
+  if(page==='sell') resetSell();
+  document.querySelectorAll('.nav-link').forEach(n=>n.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(n=>{if(n.textContent.toLowerCase().includes(page))n.classList.add('active');});
+}
+window.addEventListener('hashchange', onHash);
+function onHash(){
+  const h=location.hash.replace('#','');
+  if(h.startsWith('listing/')){const id=parseInt(h.split('/')[1]);go('detail',id);}
+  else if(h) go(h);
+  else go('home');
+}
+
+/* ── MOBILE NAV ── */
+function openMob(){document.getElementById('mob-nav').classList.add('open');document.getElementById('mob-backdrop').style.display='block';}
+function closeMob(){document.getElementById('mob-nav').classList.remove('open');document.getElementById('mob-backdrop').style.display='none';}
+
+/* ── SCROLL HEADER ── */
+window.addEventListener('scroll',()=>{const h=document.getElementById('site-header');if(window.scrollY>20)h.classList.add('scrolled');else h.classList.remove('scrolled');},{passive:true});
+
+/* ── CART ── */
+function updateCartUI(){
+  const cnt=cart.length;
+  const el=document.getElementById('cart-cnt');
+  el.textContent=cnt;
+  if(cnt>0)el.classList.remove('hidden');else el.classList.add('hidden');
+  document.getElementById('cart-hd-cnt').textContent='('+cnt+')';
+  document.getElementById('stat-listings').textContent=listings.filter(l=>l.status==='approved').length;
+}
+function openCart(){
+  renderCartItems();
+  const ov=document.getElementById('cart-overlay');
+  ov.style.display='flex';
+}
+function closeCart(){document.getElementById('cart-overlay').style.display='none';}
+function renderCartItems(){
+  const el=document.getElementById('cart-items');
+  const ft=document.getElementById('cart-footer');
+  if(cart.length===0){
+    el.innerHTML='<div style="padding:48px;text-align:center;color:var(--t4);font-family:var(--fm);font-size:11px;text-transform:uppercase;letter-spacing:.12em"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 10px;display:block;opacity:.4"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>Your cart is empty</div>';
+    ft.style.display='none';return;
+  }
+  let html='';
+  let total=0;
+  cart.forEach(item=>{
+    total+=item.price;
+    html+=`<div style="display:flex;gap:12px;padding:14px 24px;border-bottom:1px solid var(--b1);align-items:center">
+      <div style="width:48px;height:48px;background:var(--s2);flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden">${item.imageUrls&&item.imageUrls[0]?`<img src="${item.imageUrls[0]}" style="width:100%;height:100%;object-fit:cover">`:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--t4)" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>'}</div>
+      <div style="flex:1"><div style="font-family:var(--fm);font-size:9px;color:var(--gold);text-transform:uppercase;letter-spacing:.14em">${item.brand}</div><div style="font-family:var(--fd);font-weight:800;text-transform:uppercase;font-size:14px;letter-spacing:var(--ls-)">${item.model}</div><div style="font-family:var(--fm);font-size:10px;color:var(--t3)">${item.size}"</div></div>
+      <div style="text-align:right"><div style="font-family:var(--fd);font-weight:900;font-size:1.05rem">£${item.price.toLocaleString('en-GB')}</div><button onclick="removeFromCart(${item.id})" style="color:var(--t4);font-size:10px;font-family:var(--fm);margin-top:3px;text-transform:uppercase;letter-spacing:.08em">Remove</button></div>
+    </div>`;
+  });
+  el.innerHTML=html;
+  document.getElementById('cart-total').textContent='£'+total.toLocaleString('en-GB');
+  ft.style.display='block';
+}
+function addToCart(id,e){
+  if(e)e.stopPropagation();
+  const listing=listings.find(l=>l.id===id);
+  if(!listing)return;
+  if(cart.find(c=>c.id===id))return;
+  cart.push({id:listing.id,brand:listing.brand,model:listing.model,size:listing.size,price:listing.price,imageUrls:listing.imageUrls||[]});
+  saveCart();
+  updateCartUI();
+  const btn=document.getElementById('cart-btn-'+id);
+  if(btn){btn.textContent='✓ Added';btn.className='btn btn-sm w100';btn.style.marginTop='10px';setTimeout(()=>{if(btn){btn.textContent='Add to Cart';btn.className='btn btn-sm w100';}},2200);}
+}
+function removeFromCart(id){cart=cart.filter(c=>c.id!==id);saveCart();updateCartUI();renderCartItems();}
+
+/* ── LISTING CARD HTML ── */
+function listingCardHTML(l){
+  const bc=l.conditionClass==='cond-new'?'badge-new':l.conditionClass==='cond-excellent'?'badge-exc':'';
+  const bl=l.condition==='New'?'New':l.condition==='Used – Excellent'?'Excellent':'Good';
+  const img=l.imageUrls&&l.imageUrls[0]?`<img src="${l.imageUrls[0]}" alt="${l.brand} ${l.model}" loading="lazy">`:`<div class="lcard-ph"><svg width="44" height="44" viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="85" stroke="rgba(15,17,23,.10)" stroke-width="3"/><circle cx="100" cy="100" r="55" stroke="rgba(15,17,23,.07)" stroke-width="2"/><circle cx="100" cy="100" r="16" fill="rgba(15,17,23,.04)" stroke="rgba(15,17,23,.14)" stroke-width="2"/><line x1="100" y1="44" x2="100" y2="84" stroke="rgba(15,17,23,.08)" stroke-width="3"/><line x1="148" y1="75" x2="114" y2="95" stroke="rgba(15,17,23,.08)" stroke-width="3"/><line x1="148" y1="125" x2="114" y2="105" stroke="rgba(15,17,23,.08)" stroke-width="3"/><line x1="100" y1="156" x2="100" y2="116" stroke="rgba(15,17,23,.08)" stroke-width="3"/><line x1="52" y1="125" x2="86" y2="105" stroke="rgba(15,17,23,.08)" stroke-width="3"/></svg><span style="font-family:var(--fm);font-size:9px;text-transform:uppercase;letter-spacing:.12em">No Photo</span></div>`;
+  const inCart=cart.find(c=>c.id===l.id);
+  return`<div class="lcard" onclick="go('detail',${l.id})">
+    <div class="lcard-img">${img}<div class="lcard-badge ${bc}">${bl}</div>${l.featured?'<div class="badge-feat">★ Featured</div>':''}</div>
+    <div class="lcard-body">
+      <div class="lcard-brand">${l.brand}</div>
+      <div class="lcard-model">${l.model}</div>
+      <div class="lcard-tags"><span class="ltag">${l.size}"</span><span class="ltag">${l.boltPattern}</span><span class="ltag">${l.finish}</span></div>
+      <div class="lcard-price-row">
+        <span class="lcard-price">£${l.price.toLocaleString('en-GB')}</span>
+        ${l.originalPrice?`<span class="lcard-orig">£${l.originalPrice.toLocaleString('en-GB')}</span>`:''}
+        <span class="lcard-loc"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-7.5-8-12a8 8 0 0116 0c0 4.5-8 12-8 12z"/><circle cx="12" cy="9" r="2"/></svg>${l.location.split(',')[0]}</span>
+      </div>
+      <button id="cart-btn-${l.id}" class="${inCart?'btn-ghost':'btn'} btn-sm w100" style="margin-top:10px;justify-content:center" onclick="addToCart(${l.id},event)">${inCart?'✓ In Cart':'Add to Cart'}</button>
+    </div>
+  </div>`;
+}
+
+/* ── HOME ── */
+function renderHome(){
+  const approved=listings.filter(l=>l.status==='approved');
+  document.getElementById('stat-listings').textContent=approved.length;
+  const featured=approved.filter(l=>l.featured).slice(0,6);
+  const grid=document.getElementById('featured-grid');
+  if(featured.length===0){
+    grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--t3);font-family:var(--fm);font-size:11px;text-transform:uppercase;letter-spacing:.12em">No featured listings yet</div>';
+  } else {
+    grid.innerHTML=featured.map(listingCardHTML).join('');
+  }
+}
+
+/* ── MARKETPLACE ── */
+const BRANDS=['all','BBS','Enkei','Rays','OZ Racing','Work','Apex','Rota','Vossen'];
+const CONDS=['all','cond-new','cond-excellent','cond-good'];
+const COND_LABELS={'all':'All Conditions','cond-new':'New','cond-excellent':'Excellent','cond-good':'Good'};
+
+function renderMarketplace(){
+  const approved=listings.filter(l=>l.status==='approved');
+  // Brand pills (once)
+  const bp=document.getElementById('brand-pills');
+  if(!bp.hasChildNodes()){
+    bp.innerHTML=BRANDS.map(b=>`<button class="pill${mpBrand===b?' on':''}" data-brand="${b}" onclick="mpBrand=this.dataset.brand;document.querySelectorAll('[data-brand]').forEach(p=>p.classList.remove('on'));this.classList.add('on');renderMarketplace()">${b==='all'?'All Brands':b}</button>`).join('');
+  }
+  const cp=document.getElementById('cond-pills');
+  if(!cp.hasChildNodes()){
+    cp.innerHTML=CONDS.map(c=>`<button class="pill${mpCond===c?' on':''}" data-cond="${c}" onclick="mpCond=this.dataset.cond;document.querySelectorAll('[data-cond]').forEach(p=>p.classList.remove('on'));this.classList.add('on');renderMarketplace()">${COND_LABELS[c]}</button>`).join('');
+  }
+  const search=document.getElementById('mp-search').value.toLowerCase().trim();
+  const sort=document.getElementById('mp-sort').value;
+  let filtered=approved.filter(l=>{
+    if(mpBrand!=='all'&&l.brand!==mpBrand)return false;
+    if(mpCond!=='all'&&l.conditionClass!==mpCond)return false;
+    if(search&&![l.brand,l.model,l.finish,l.description,l.location].join(' ').toLowerCase().includes(search))return false;
+    return true;
+  });
+  if(sort==='asc')filtered.sort((a,b)=>a.price-b.price);
+  else if(sort==='desc')filtered.sort((a,b)=>b.price-a.price);
+  else filtered.sort((a,b)=>b.createdAt-a.createdAt);
+  document.getElementById('mp-count').textContent=filtered.length+' listing'+(filtered.length!==1?'s':'');
+  const grid=document.getElementById('mp-grid');
+  if(filtered.length===0){
+    grid.innerHTML='<div style="grid-column:1/-1;background:#fff;border:1px solid var(--b1);padding:60px;text-align:center"><div style="font-family:var(--fd);font-weight:800;font-size:1.25rem;text-transform:uppercase;letter-spacing:var(--ls-);color:var(--t2);margin-bottom:10px">No listings found</div><p style="color:var(--t3);font-size:13px">Try adjusting your filters.</p></div>';
+  } else {
+    grid.innerHTML=filtered.map(listingCardHTML).join('');
+  }
+}
+
+/* ── DETAIL ── */
+function renderDetail(id){
+  const l=listings.find(x=>x.id===id);
+  if(!l){document.getElementById('detail-content').innerHTML='<p>Listing not found.</p>';return;}
+  const imgHTML=l.imageUrls&&l.imageUrls.length>0
+    ?`<div style="display:grid;gap:8px;grid-template-columns:1fr 1fr;margin-bottom:24px">
+        <div class="detail-img cc" style="grid-column:1/-1;aspect-ratio:16/9"><img src="${l.imageUrls[0]}" alt="${l.brand} ${l.model}"></div>
+        ${l.imageUrls.slice(1).map(u=>`<div class="detail-img cc" style="aspect-ratio:4/3"><img src="${u}"></div>`).join('')}
+      </div>`
+    :`<div class="detail-img cc" style="margin-bottom:24px;height:340px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px"><svg width="64" height="64" viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="85" stroke="rgba(15,17,23,.08)" stroke-width="3"/><circle cx="100" cy="100" r="55" stroke="rgba(15,17,23,.05)" stroke-width="2"/><circle cx="100" cy="100" r="16" fill="rgba(15,17,23,.03)" stroke="rgba(15,17,23,.1)" stroke-width="2"/></svg><span style="font-family:var(--fm);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--t4)">No Photos Available</span></div>`;
+  const bc=l.conditionClass==='cond-new'?'badge-new':l.conditionClass==='cond-excellent'?'badge-exc':'';
+  const bl=l.condition==='New'?'New':l.condition==='Used – Excellent'?'Excellent':'Good';
+  const inCart=cart.find(c=>c.id===l.id);
+  document.getElementById('detail-content').innerHTML=`
+    <div style="display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start">
+      <div>
+        ${imgHTML}
+        ${l.description?`<div style="padding:20px;background:var(--s1);border:1px solid var(--b1);margin-top:16px"><div style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--t3);margin-bottom:8px">Description</div><p style="font-size:14px;color:var(--t2);line-height:1.75">${l.description}</p></div>`:''}
+      </div>
+      <div style="position:sticky;top:80px">
+        <div style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);margin-bottom:6px">${l.brand}</div>
+        <h2 style="font-family:var(--fd);font-weight:900;text-transform:uppercase;font-size:clamp(1.5rem,3vw,2rem);letter-spacing:var(--ls-);margin-bottom:12px">${l.model}</h2>
+        <span class="lcard-badge ${bc}" style="position:static;margin-bottom:16px;display:inline-block">${bl}</span>
+        <div style="font-family:var(--fd);font-weight:900;font-size:2rem;letter-spacing:var(--ls-);margin-bottom:4px">£${l.price.toLocaleString('en-GB')}</div>
+        ${l.originalPrice?`<div style="font-size:13px;color:var(--t4);text-decoration:line-through;margin-bottom:16px">£${l.originalPrice.toLocaleString('en-GB')} original</div>`:'<div style="margin-bottom:16px"></div>'}
+        <div class="spec-grid">
+          <div class="spec-cell"><div class="spec-key">Size</div><div class="spec-val">${l.size}"</div></div>
+          <div class="spec-cell"><div class="spec-key">Bolt Pattern</div><div class="spec-val">${l.boltPattern}</div></div>
+          <div class="spec-cell"><div class="spec-key">Set of</div><div class="spec-val">${l.setOf}</div></div>
+          <div class="spec-cell"><div class="spec-key">Finish</div><div class="spec-val">${l.finish}</div></div>
+          <div class="spec-cell"><div class="spec-key">Condition</div><div class="spec-val">${l.condition}</div></div>
+          <div class="spec-cell"><div class="spec-key">Location</div><div class="spec-val">${l.location}</div></div>
+        </div>
+        <button id="detail-cart-btn" class="${inCart?'btn-ghost':'btn'} w100 mt20" style="justify-content:center" onclick="addToCart(${l.id},event);document.getElementById('detail-cart-btn').textContent='✓ Added to Cart';document.getElementById('detail-cart-btn').className='btn-ghost w100 mt20'">${inCart?'✓ Added to Cart':'Add to Cart'}</button>
+        <div style="margin-top:20px;padding:16px;background:var(--s1);border:1px solid var(--b1)">
+          <div style="font-family:var(--fm);font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:var(--t3);margin-bottom:8px">Seller</div>
+          <div style="font-family:var(--fd);font-weight:800;font-size:.9375rem;text-transform:uppercase;letter-spacing:var(--ls-)">${l.sellerName||'Private Seller'}</div>
+          <div style="font-family:var(--fm);font-size:10px;color:var(--t3);margin-top:2px">${l.sellerEmail||''}</div>
+          <div style="display:flex;align-items:center;gap:4px;margin-top:4px;font-family:var(--fm);font-size:10px;color:var(--t3)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-7.5-8-12a8 8 0 0116 0c0 4.5-8 12-8 12z"/><circle cx="12" cy="9" r="2"/></svg>${l.location}</div>
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:760px){#detail-content>div{grid-template-columns:1fr!important}#detail-content>div>div:last-child{position:static!important}}</style>`;
+}
+
+/* ── SELL FORM ── */
+function resetSell(){
+  sellStep=1;sellPhotos=[];
+  ['sell-s1','sell-s2','sell-s3','sell-s4'].forEach((id,i)=>{document.getElementById(id).style.display=i===0?'block':'none';});
+  ['step-1','step-2','step-3','step-4'].forEach((id,i)=>{const el=document.getElementById(id);el.className='step-item';if(i===0)el.classList.add('active');});
+  ['s-brand','s-model','s-size','s-bolt','s-cond','s-finish','s-setof','s-width','s-desc','s-price','s-orig','s-location','s-name','s-email','s-phone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  document.getElementById('photo-previews').innerHTML='';
+  const ok=document.getElementById('s4-ok');if(ok)ok.style.display='none';
+}
+function setStep(n){
+  sellStep=n;
+  ['sell-s1','sell-s2','sell-s3','sell-s4'].forEach((id,i)=>{document.getElementById(id).style.display=i===n-1?'block':'none';});
+  ['step-1','step-2','step-3','step-4'].forEach((id,i)=>{const el=document.getElementById(id);el.className='step-item';if(i<n-1)el.classList.add('done');if(i===n-1)el.classList.add('active');});
+  window.scrollTo(0,0);
+}
+function sellNext(step){
+  if(step===1){
+    const b=document.getElementById('s-brand').value,m=document.getElementById('s-model').value,s=document.getElementById('s-size').value,bp=document.getElementById('s-bolt').value,c=document.getElementById('s-cond').value,f=document.getElementById('s-finish').value;
+    if(!b||!m||!s||!bp||!c||!f){document.getElementById('s1-err').textContent='Please fill in all required fields.';return;}
+    document.getElementById('s1-err').textContent='';setStep(2);
+  } else if(step===2){
+    const p=document.getElementById('s-price').value,loc=document.getElementById('s-location').value;
+    if(!p||!loc){document.getElementById('s2-err').textContent='Please fill in price and location.';return;}
+    document.getElementById('s2-err').textContent='';setStep(3);
+  } else if(step===3){
+    setStep(4);
+  }
+}
+function sellBack(step){setStep(step-1);}
+
+/* ── IMAGE UPLOAD ── */
+function handleFiles(files){
+  const remaining=8-sellPhotos.length;
+  const toRead=Array.from(files).slice(0,remaining);
+  toRead.forEach(file=>{
+    if(!file.type.startsWith('image/'))return;
+    if(file.size>5*1024*1024){alert('File '+file.name+' is too large (max 5MB)');return;}
+    const reader=new FileReader();
+    reader.onload=e=>{
+      sellPhotos.push(e.target.result);
+      renderPhotoPreviews();
+    };
+    reader.readAsDataURL(file);
+  });
+}
+function handleDrop(e){
+  e.preventDefault();
+  document.getElementById('upload-zone').classList.remove('drag');
+  handleFiles(e.dataTransfer.files);
+}
+function removePhoto(idx){sellPhotos.splice(idx,1);renderPhotoPreviews();}
+function renderPhotoPreviews(){
+  document.getElementById('photo-previews').innerHTML=sellPhotos.map((src,i)=>`<div class="upload-thumb"><img src="${src}"><span class="rm-img" onclick="removePhoto(${i})">✕</span></div>`).join('');
+}
+
+/* ── SUBMIT LISTING ── */
+function submitListing(){
+  const name=document.getElementById('s-name').value.trim();
+  const email=document.getElementById('s-email').value.trim();
+  if(!name||!email){document.getElementById('s4-err').textContent='Name and email are required.';return;}
+  if(!/\S+@\S+\.\S+/.test(email)){document.getElementById('s4-err').textContent='Please enter a valid email.';return;}
+  document.getElementById('s4-err').textContent='';
+  const btn=document.getElementById('submit-btn');btn.disabled=true;btn.textContent='Submitting…';
+  const cc=document.getElementById('s-cond').value;
+  const condClass=cc==='New'?'cond-new':cc==='Used – Excellent'?'cond-excellent':'cond-good';
+  const newListing={
+    id:nextId(),
+    brand:document.getElementById('s-brand').value,
+    model:document.getElementById('s-model').value,
+    size:document.getElementById('s-size').value,
+    boltPattern:document.getElementById('s-bolt').value,
+    condition:cc,conditionClass:condClass,
+    price:parseFloat(document.getElementById('s-price').value),
+    originalPrice:document.getElementById('s-orig').value?parseFloat(document.getElementById('s-orig').value):null,
+    location:document.getElementById('s-location').value,
+    finish:document.getElementById('s-finish').value,
+    setOf:parseInt(document.getElementById('s-setof').value),
+    imageUrls:sellPhotos.slice(),
+    description:document.getElementById('s-desc').value,
+    sellerName:name,sellerEmail:email,
+    phone:document.getElementById('s-phone').value,
+    preferredContact:document.getElementById('s-contact').value,
+    status:'pending',featured:false,
+    createdAt:Date.now()
+  };
+  listings.push(newListing);
+  saveListings();
+  const ok=document.getElementById('s4-ok');
+  ok.textContent='✓ Your listing has been submitted and is pending admin approval. We\'ll email you once it goes live.';
+  ok.style.display='block';
+  btn.disabled=false;btn.textContent='Submit Another →';
+  btn.onclick=()=>{resetSell();go('sell');};
+}
+
+/* ── ADMIN ── */
+let adminFilter='all';
+function checkAdminPw(){
+  const pw=document.getElementById('admin-pw').value;
+  if(pw===ADMIN_PW){
+    sessionStorage.setItem('tw_admin','1');
+    document.getElementById('admin-gate').style.display='none';
+    document.getElementById('admin-dash').style.display='block';
+    renderAdminDash();
+  } else {
+    document.getElementById('admin-pw-err').textContent='Incorrect password. Access denied.';
+    const box=document.getElementById('gate-box');
+    box.classList.add('shake');setTimeout(()=>box.classList.remove('shake'),500);
+    document.getElementById('admin-pw').value='';
+  }
+}
+function adminLogout(){sessionStorage.removeItem('tw_admin');document.getElementById('admin-gate').style.display='flex';document.getElementById('admin-dash').style.display='none';}
+function renderAdmin(){
+  if(sessionStorage.getItem('tw_admin')==='1'){
+    document.getElementById('admin-gate').style.display='none';
+    document.getElementById('admin-dash').style.display='block';
+    renderAdminDash();
+  } else {
+    document.getElementById('admin-gate').style.display='flex';
+    document.getElementById('admin-dash').style.display='none';
+  }
+}
+function renderAdminDash(){
+  const tot=listings.length, pend=listings.filter(l=>l.status==='pending').length, appr=listings.filter(l=>l.status==='approved').length, rej=listings.filter(l=>l.status==='rejected').length;
+  document.getElementById('admin-stats').innerHTML=
+    `<div style="background:#fff;border:1px solid var(--b1);padding:20px 24px;clip-path:polygon(0 10px,10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);cursor:pointer" onclick="adminFilter='all';renderAdminDash()"><div style="font-family:var(--fd);font-weight:900;font-size:2rem;letter-spacing:var(--ls-)">${tot}</div><div style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--t3);margin-top:6px">Total</div></div>
+    <div style="background:#fff;border:1px solid var(--b1);padding:20px 24px;clip-path:polygon(0 10px,10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);cursor:pointer" onclick="adminFilter='pending';renderAdminDash()"><div style="font-family:var(--fd);font-weight:900;font-size:2rem;letter-spacing:var(--ls-)">${pend}</div><div style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#92600a;margin-top:6px">Pending</div></div>
+    <div style="background:#fff;border:1px solid var(--b1);padding:20px 24px;clip-path:polygon(0 10px,10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);cursor:pointer" onclick="adminFilter='approved';renderAdminDash()"><div style="font-family:var(--fd);font-weight:900;font-size:2rem;letter-spacing:var(--ls-)">${appr}</div><div style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#15803d;margin-top:6px">Approved</div></div>
+    <div style="background:#fff;border:1px solid var(--b1);padding:20px 24px;clip-path:polygon(0 10px,10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);cursor:pointer" onclick="adminFilter='rejected';renderAdminDash()"><div style="font-family:var(--fd);font-weight:900;font-size:2rem;letter-spacing:var(--ls-)">${rej}</div><div style="font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#dc2626;margin-top:6px">Rejected</div></div>`;
+
+  const fil=['all','pending','approved','rejected'];
+  document.getElementById('admin-filter-btns').innerHTML=fil.map(f=>`<button class="pill${adminFilter===f?' on':''}" onclick="adminFilter='${f}';renderAdminDash()">${f==='all'?'All':f.charAt(0).toUpperCase()+f.slice(1)} (${f==='all'?tot:f==='pending'?pend:f==='approved'?appr:rej})</button>`).join('');
+
+  const filtered=adminFilter==='all'?listings:listings.filter(l=>l.status===adminFilter);
+  const statusStyle={pending:'color:#92600a;background:#fffbeb;border:1px solid rgba(146,96,10,.25)',approved:'color:#15803d;background:#f0fdf4;border:1px solid rgba(21,128,61,.25)',rejected:'color:#dc2626;background:#fef2f2;border:1px solid rgba(220,38,38,.25)'};
+  document.getElementById('admin-tbody').innerHTML=filtered.map(l=>`
+    <tr>
+      <td style="font-family:var(--fm);color:var(--t4);font-size:11px">#${l.id}</td>
+      <td><div style="font-family:var(--fd);font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:var(--ls-)">${l.brand} ${l.model}</div>${l.sellerEmail?`<div style="font-family:var(--fm);font-size:10px;color:var(--t4);margin-top:2px">${l.sellerEmail}</div>`:''}</td>
+      <td style="font-family:var(--fm);font-size:12px">${l.size}"</td>
+      <td style="font-family:var(--fd);font-weight:800;font-size:14px">£${l.price.toLocaleString('en-GB')}</td>
+      <td style="font-family:var(--fm);font-size:11px">${l.location}</td>
+      <td><span style="font-family:var(--fm);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:3px 9px;border-radius:2px;white-space:nowrap;${statusStyle[l.status]||''}">● ${l.status}</span></td>
+      <td><button onclick="adminToggleFeat(${l.id})" style="font-family:var(--fm);font-size:11px;color:${l.featured?'var(--gold)':'var(--t4)'};font-weight:600;text-transform:uppercase;letter-spacing:.08em">${l.featured?'★ Yes':'☆ No'}</button></td>
+      <td><div style="display:flex;gap:6px;flex-wrap:wrap">
+        ${l.status!=='approved'?`<button class="btn-approve" onclick="adminUpdate(${l.id},'status','approved')">Approve</button>`:''}
+        ${l.status!=='rejected'?`<button class="btn-ghost btn-sm" onclick="adminUpdate(${l.id},'status','rejected')">Reject</button>`:''}
+        <button class="btn-danger" onclick="adminDelete(${l.id})">Delete</button>
+      </div></td>
+    </tr>`).join('');
+}
+function adminUpdate(id,key,val){
+  const l=listings.find(x=>x.id===id);if(!l)return;l[key]=val;saveListings();renderAdminDash();
+  showAdminMsg('Listing #'+id+' updated.');
+}
+function adminToggleFeat(id){const l=listings.find(x=>x.id===id);if(!l)return;l.featured=!l.featured;saveListings();renderAdminDash();}
+function adminDelete(id){if(!confirm('Delete listing #'+id+'?'))return;listings=listings.filter(l=>l.id!==id);saveListings();renderAdminDash();showAdminMsg('Listing #'+id+' deleted.');}
+function showAdminMsg(msg){const el=document.getElementById('admin-msg');el.innerHTML=`<div class="alert-ok mb16">${msg}</div>`;setTimeout(()=>el.innerHTML='',3000);}
+
+/* ── CHECKOUT ── */
+function renderCheckout(){
+  const items=cart;
+  if(items.length===0){document.getElementById('order-summary').innerHTML='<p style="color:var(--t3);font-size:13px">Your cart is empty.</p>';return;}
+  let total=0;
+  let html='';
+  items.forEach(item=>{
+    total+=item.price;
+    html+=`<div style="display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--b1)"><div style="font-family:var(--fd);font-weight:800;text-transform:uppercase;font-size:13px;flex:1;letter-spacing:var(--ls-)">${item.brand} ${item.model}</div><div style="font-family:var(--fd);font-weight:900;font-size:14px">£${item.price.toLocaleString('en-GB')}</div></div>`;
+  });
+  html+=`<div style="display:flex;justify-content:space-between;padding-top:16px"><span style="font-family:var(--fm);font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:.1em">Total</span><span style="font-family:var(--fd);font-weight:900;font-size:1.4rem">£${total.toLocaleString('en-GB')}</span></div>`;
+  document.getElementById('order-summary').innerHTML=html;
+}
+function placeOrder(){
+  const fn=document.getElementById('ch-fn').value.trim(), ln=document.getElementById('ch-ln').value.trim(), email=document.getElementById('ch-email').value.trim(), addr=document.getElementById('ch-addr').value.trim();
+  if(!fn||!ln||!email||!addr){alert('Please fill in all required fields.');return;}
+  const ok=document.getElementById('ch-ok');
+  ok.textContent='✓ Order placed successfully! A confirmation has been sent to '+email+'. (Demo — no real order was processed.)';
+  ok.style.display='block';
+  cart=[];saveCart();updateCartUI();
+}
+
+/* ── INIT ── */
+loadListings();
+loadCart();
+updateCartUI();
+go('home');
+</script>
+</body>
+</html>
